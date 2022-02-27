@@ -16,9 +16,9 @@ public class CardReplenishment {
         cart.shouldBe(visible);
     }
 
-    public DashboardPage replenishment(){
-        sum.setValue("200");
-        from.setValue("5559 0000 0000 0002");
+    public DashboardPage replenishment(String amount, String cardNumber){
+        sum.setValue(amount);
+        from.setValue(cardNumber);
         topUpButton.click();
         return new DashboardPage();
     }
